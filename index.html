@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Telecoms — The Fastest Websites in the Universe!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="starCanvas"></canvas>
+    <canvas id="lightningCanvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+                <span class="logo-text">SA<span class="logo-accent">TELECOMS</span></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#powers">Superpowers</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#contact">Launch</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta"><i class="fas fa-rocket"></i> LAUNCH NOW</a>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero">
+        <div class="hero-cosmos"></div>
+        <div class="hero-halftone"></div>
+        <div class="hero-speed-lines"></div>
+
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="planet planet-3"></div>
+
+        <div class="burst burst-tl"></div>
+        <div class="burst burst-tr"></div>
+
+        <div class="comic-word cw-boost">BOOST!</div>
+        <div class="comic-word cw-zoom">ZOOM!</div>
+        <div class="comic-word cw-blast">BLAST OFF!</div>
+
+        <!-- Animated rocket -->
+        <div class="hero-rocket-wrap">
+            <div class="rocket-ship">
+                <div class="rocket-body">
+                    <div class="rocket-nose"></div>
+                    <div class="rocket-window"></div>
+                    <div class="rocket-fin rocket-fin-l"></div>
+                    <div class="rocket-fin rocket-fin-r"></div>
+                </div>
+                <div class="rocket-flames">
+                    <div class="rflame rf1"></div>
+                    <div class="rflame rf2"></div>
+                    <div class="rflame rf3"></div>
+                </div>
+                <div class="rocket-smoke">
+                    <div class="smoke-puff sp-1"></div>
+                    <div class="smoke-puff sp-2"></div>
+                    <div class="smoke-puff sp-3"></div>
+                    <div class="smoke-puff sp-4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-main-content">
+            <div class="hero-inner">
+                <!-- LEFT -->
+                <div class="hero-text" data-reveal>
+                    <div class="hero-badge"><i class="fas fa-star"></i> SOUTH AFRICA'S #1 WEB HEROES</div>
+                    <h1 class="hero-headline">
+                        <span class="line-1">THE FASTEST</span>
+                        <span class="line-2">WEBSITES IN</span>
+                        <span class="line-3">THE UNIVERSE!</span>
+                    </h1>
+                    <p class="hero-sub">
+                        <strong>Website + Hosting + Support + Monthly Updates</strong><br>
+                        Ultra-fast. Always online. Built by your superhero team.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn-comic btn-primary-comic">
+                            <i class="fas fa-rocket"></i> LAUNCH YOUR WEBSITE NOW
+                        </a>
+                        <a href="#pricing" class="btn-comic btn-secondary-comic">
+                            <i class="fas fa-bolt"></i> SEE PLANS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT: promo explosion -->
+                <div class="hero-promo" data-reveal data-delay="200">
+                    <div class="explosion-wrap">
+                        <div class="explosion-ring er-1"></div>
+                        <div class="explosion-ring er-2"></div>
+                        <div class="explosion-shape">
+                            <div class="explosion-inner">
+                                <div class="promo-fire-badge">🔥 LIMITED OFFER</div>
+                                <div class="promo-was">WAS <span>R800</span></div>
+                                <div class="promo-now-label">NOW ONLY</div>
+                                <div class="promo-price">R299<span class="promo-mo">/mo</span></div>
+                                <div class="promo-includes">
+                                    <span><i class="fas fa-check-circle"></i> Website Design</span>
+                                    <span><i class="fas fa-check-circle"></i> Fast Hosting</span>
+                                    <span><i class="fas fa-check-circle"></i> 24/7 Support</span>
+                                    <span><i class="fas fa-check-circle"></i> Monthly Updates</span>
+                                </div>
+                                <a href="#contact" class="promo-cta-btn">CLAIM OFFER!</a>
+                            </div>
+                        </div>
+                        <div class="mini-burst mb-1"></div>
+                        <div class="mini-burst mb-2"></div>
+                        <div class="mini-burst mb-3"></div>
+                        <div class="mini-burst mb-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent lineup at bottom of hero -->
+        <div class="hero-agents">
+            <div class="agent-lineup">
+                <div class="agent-hero mike" data-reveal data-delay="0">
+                    <div class="agent-glow"></div>
+                    <div class="agent-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="agent-speech">Ready to Launch? 🚀</div>
+                    <div class="agent-name">MIKE</div>
+                    <div class="agent-role">Launch Specialist</div>
+                </div>
+                <div class="agent-hero betty" data-reveal data-delay="100">
+                    <div class="agent-glow"></div>
+                    <div class="agent-avatar">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <div class="agent-speech">Let's Build Your Site! ⚡</div>
+                    <div class="agent-name">BETTY</div>
+                    <div class="agent-role">Design Hero</div>
+                </div>
+                <div class="agent-hero mel" data-reveal data-delay="200">
+                    <div class="agent-glow"></div>
+                    <div class="agent-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="agent-speech">We've Got You Covered! 🛡</div>
+                    <div class="agent-name">MEL</div>
+                    <div class="agent-role">Security Expert</div>
+                </div>
+                <div class="agent-hero michael" data-reveal data-delay="300">
+                    <div class="agent-glow"></div>
+                    <div class="agent-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="agent-speech">Speed Activated! ⚡💨</div>
+                    <div class="agent-name">MICHAEL</div>
+                    <div class="agent-role">Speed Engineer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>SCROLL DOWN</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== SUPERPOWERS ===== -->
+    <section id="powers" class="powers">
+        <div class="panel-border-top"></div>
+        <div class="section-rocket sr-left"><i class="fas fa-rocket"></i></div>
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">CHAPTER 1</div>
+                <h2 class="section-title">OUR <span class="text-yellow">SUPERPOWERS</span></h2>
+                <p class="section-sub">Every website we build comes loaded with hero-grade abilities.</p>
+            </div>
+            <div class="powers-grid">
+                <div class="power-panel" data-reveal data-delay="0">
+                    <div class="panel-number">01</div>
+                    <div class="power-icon-wrap power-blue"><i class="fas fa-bolt"></i></div>
+                    <h3>LIGHTNING-FAST<br>LOAD SPEEDS</h3>
+                    <p>Sub-second load times on NVMe SSDs. Your visitors won't wait — they'll be amazed.</p>
+                    <div class="power-bar"><div class="power-fill" style="width:97%"><span>97%</span></div></div>
+                </div>
+                <div class="power-panel" data-reveal data-delay="100">
+                    <div class="panel-number">02</div>
+                    <div class="power-icon-wrap power-purple"><i class="fas fa-shield-halved"></i></div>
+                    <h3>ENTERPRISE-GRADE<br>SECURITY</h3>
+                    <p>Free SSL, DDoS protection, firewall & malware scanning. Fort Knox for your website.</p>
+                    <div class="power-bar"><div class="power-fill" style="width:99%"><span>99%</span></div></div>
+                </div>
+                <div class="power-panel" data-reveal data-delay="200">
+                    <div class="panel-number">03</div>
+                    <div class="power-icon-wrap power-pink"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>99.9% UPTIME<br>GUARANTEE</h3>
+                    <p>Redundant infrastructure across multiple data centers. Your site never sleeps.</p>
+                    <div class="power-bar"><div class="power-fill" style="width:99%"><span>99.9%</span></div></div>
+                </div>
+                <div class="power-panel" data-reveal data-delay="300">
+                    <div class="panel-number">04</div>
+                    <div class="power-icon-wrap power-yellow"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 HERO<br>SUPPORT</h3>
+                    <p>Real humans. Real fast. We respond in minutes, not hours, around the clock.</p>
+                    <div class="power-bar"><div class="power-fill" style="width:95%"><span>95%</span></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-border-bottom"></div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section id="why" class="why-us">
+        <div class="halftone-bg halftone-dark"></div>
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">CHAPTER 2</div>
+                <h2 class="section-title">FASTER THAN <span class="text-pink">LIGHT</span></h2>
+                <p class="section-sub">The tech that makes us unbeatable.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-reveal data-delay="0">
+                    <div class="why-icon"><i class="fas fa-hard-drive"></i></div>
+                    <h3>NVMe SSD Storage</h3>
+                    <p>10× faster than traditional hosting. Your data launches like a rocket.</p>
+                </div>
+                <div class="why-card" data-reveal data-delay="100">
+                    <div class="why-icon"><i class="fas fa-gauge-high"></i></div>
+                    <h3>Optimised Performance</h3>
+                    <p>Server caching, PHP tuning and resource allocation maxed out.</p>
+                </div>
+                <div class="why-card" data-reveal data-delay="200">
+                    <div class="why-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Global CDN</h3>
+                    <p>Edge delivery from the closest server to every visitor worldwide.</p>
+                </div>
+                <div class="why-card" data-reveal data-delay="300">
+                    <div class="why-icon"><i class="fas fa-database"></i></div>
+                    <h3>Daily Backups</h3>
+                    <p>Automatic daily snapshots. One-click restore. Your data is immortal.</p>
+                </div>
+            </div>
+            <div class="stats-row">
+                <div class="stat-bubble" data-reveal data-delay="0">
+                    <div class="stat-num" data-target="10000">0</div><div class="stat-plus">+</div>
+                    <div class="stat-label">Sites Launched</div>
+                </div>
+                <div class="stat-bubble" data-reveal data-delay="100">
+                    <div class="stat-num" data-target="99.9" data-decimal="true">0</div><div class="stat-plus">%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat-bubble" data-reveal data-delay="200">
+                    <div class="stat-num" data-target="0.8" data-decimal="true">0</div><div class="stat-plus">s</div>
+                    <div class="stat-label">Avg Load</div>
+                </div>
+                <div class="stat-bubble" data-reveal data-delay="300">
+                    <div class="stat-num" data-target="24">0</div><div class="stat-plus">/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HERO SUPPORT TEAM ===== -->
+    <section id="team" class="team-section">
+        <div class="panel-border-top"></div>
+        <div class="team-cosmos"></div>
+        <div class="team-halftone"></div>
+        <div class="section-rocket sr-right"><i class="fas fa-rocket"></i></div>
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">CHAPTER 3</div>
+                <h2 class="section-title team-title">YOUR HERO <span class="text-yellow">SUPPORT TEAM</span></h2>
+                <p class="section-sub team-sub">Four superheroes. One mission — make your website unstoppable.</p>
+            </div>
+            <div class="team-grid">
+                <div class="agent-card mike-card" data-reveal data-delay="0">
+                    <div class="agent-card-glow glow-blue"></div>
+                    <div class="agent-card-badge badge-blue">LAUNCH SPECIALIST</div>
+                    <div class="agent-card-avatar av-blue"><i class="fas fa-user-astronaut"></i><div class="avatar-ring"></div></div>
+                    <div class="agent-card-bubble"><span>Ready to Launch? 🚀</span><div class="bubble-tail"></div></div>
+                    <h3 class="agent-card-name">MIKE</h3>
+                    <p class="agent-card-bio">Takes your idea from zero to live in record time. Precision. Power. Perfection.</p>
+                    <div class="agent-card-powers"><span><i class="fas fa-bolt"></i> Speed</span><span><i class="fas fa-rocket"></i> Launch</span></div>
+                </div>
+                <div class="agent-card betty-card" data-reveal data-delay="150">
+                    <div class="agent-card-glow glow-pink"></div>
+                    <div class="agent-card-badge badge-pink">DESIGN HERO</div>
+                    <div class="agent-card-avatar av-pink"><i class="fas fa-user-ninja"></i><div class="avatar-ring"></div></div>
+                    <div class="agent-card-bubble"><span>Let's Build Your Site! ⚡</span><div class="bubble-tail"></div></div>
+                    <h3 class="agent-card-name">BETTY</h3>
+                    <p class="agent-card-bio">Crafts pixel-perfect websites that convert visitors into customers. Every time.</p>
+                    <div class="agent-card-powers"><span><i class="fas fa-palette"></i> Design</span><span><i class="fas fa-star"></i> UX</span></div>
+                </div>
+                <div class="agent-card mel-card" data-reveal data-delay="300">
+                    <div class="agent-card-glow glow-purple"></div>
+                    <div class="agent-card-badge badge-purple">SECURITY EXPERT</div>
+                    <div class="agent-card-avatar av-purple"><i class="fas fa-user-shield"></i><div class="avatar-ring"></div></div>
+                    <div class="agent-card-bubble"><span>We've Got You Covered! 🛡</span><div class="bubble-tail"></div></div>
+                    <h3 class="agent-card-name">MEL</h3>
+                    <p class="agent-card-bio">Guards your digital fortress 24/7. Hackers don't stand a chance against Mel.</p>
+                    <div class="agent-card-powers"><span><i class="fas fa-shield-halved"></i> Security</span><span><i class="fas fa-lock"></i> SSL</span></div>
+                </div>
+                <div class="agent-card michael-card" data-reveal data-delay="450">
+                    <div class="agent-card-glow glow-yellow"></div>
+                    <div class="agent-card-badge badge-yellow">SPEED ENGINEER</div>
+                    <div class="agent-card-avatar av-yellow"><i class="fas fa-user-tie"></i><div class="avatar-ring"></div></div>
+                    <div class="agent-card-bubble"><span>Speed Activated! ⚡💨</span><div class="bubble-tail"></div></div>
+                    <h3 class="agent-card-name">MICHAEL</h3>
+                    <p class="agent-card-bio">Optimises every millisecond so your site flies faster than a speeding bullet.</p>
+                    <div class="agent-card-powers"><span><i class="fas fa-gauge-high"></i> Performance</span><span><i class="fas fa-fire"></i> Turbo</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-border-bottom"></div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">CHAPTER 4</div>
+                <h2 class="section-title">CHOOSE YOUR <span class="text-yellow">POWER LEVEL</span></h2>
+                <p class="section-sub">Every plan includes design + hosting + support + updates.</p>
+            </div>
+            <div class="pricing-grid">
+
+                <!-- STARTER — FEATURED -->
+                <div class="pricing-panel featured-panel" data-reveal data-delay="0">
+                    <div class="featured-ribbon">BEST VALUE</div>
+                    <div class="pricing-burst-bg"></div>
+                    <div class="plan-badge plan-badge-blue">
+                        <i class="fas fa-rocket"></i> STARTER
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-was">WAS R800</div>
+                        <div class="price-main">R<span class="price-num">299</span><span class="price-period">/mo</span></div>
+                        <div class="price-save">YOU SAVE 63%</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Professional Website Design</li>
+                        <li><i class="fas fa-check"></i> Fast SSD Web Hosting</li>
+                        <li><i class="fas fa-check"></i> Free SSL Certificate</li>
+                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check"></i> Monthly Content Updates</li>
+                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                    </ul>
+                    <a href="#contact" class="btn-comic btn-plan-featured">LAUNCH NOW!</a>
+                </div>
+
+                <!-- PRO -->
+                <div class="pricing-panel" data-reveal data-delay="150">
+                    <div class="plan-badge plan-badge-purple">
+                        <i class="fas fa-fire"></i> PRO
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-main">R<span class="price-num">599</span><span class="price-period">/mo</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Starter</li>
+                        <li><i class="fas fa-check"></i> E-Commerce Ready</li>
+                        <li><i class="fas fa-check"></i> SEO Optimisation</li>
+                        <li><i class="fas fa-check"></i> CDN Integration</li>
+                        <li><i class="fas fa-check"></i> Weekly Updates</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="btn-comic btn-plan">GO PRO</a>
+                </div>
+
+                <!-- BUSINESS -->
+                <div class="pricing-panel" data-reveal data-delay="300">
+                    <div class="plan-badge plan-badge-pink">
+                        <i class="fas fa-crown"></i> BUSINESS
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-main">R<span class="price-num">1299</span><span class="price-period">/mo</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Custom Web Application</li>
+                        <li><i class="fas fa-check"></i> Dedicated Resources</li>
+                        <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                        <li><i class="fas fa-check"></i> Daily Backups</li>
+                        <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                    </ul>
+                    <a href="#contact" class="btn-comic btn-plan">GO BUSINESS</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-border-bottom"></div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="stories" class="stories">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">CHAPTER 5</div>
+                <h2 class="section-title">SUCCESS STORIES <span class="text-pink">FROM EARTH</span></h2>
+                <p class="section-sub">Real heroes. Real results.</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-panel" data-reveal data-delay="0">
+                    <div class="story-stars">★★★★★</div>
+                    <p class="story-text">"Our old website took 6 seconds to load. SA Telecoms rebuilt it — now it's under 1 second. Our enquiries <strong>doubled</strong> in month one. Absolutely game-changing!"</p>
+                    <div class="story-author">
+                        <div class="author-avatar av-blue"><i class="fas fa-user-tie"></i></div>
+                        <div><strong>Thabo Mokoena</strong><br><span>Owner, Mokoena Auto</span></div>
+                    </div>
+                </div>
+                <div class="story-panel" data-reveal data-delay="150">
+                    <div class="story-stars">★★★★★</div>
+                    <p class="story-text">"I was paying R800 somewhere else for a slow, ugly site. Switched to SA Telecoms for <strong>R299</strong> — faster, better-looking, with actual support. Best move ever."</p>
+                    <div class="story-author">
+                        <div class="author-avatar av-pink"><i class="fas fa-user-ninja"></i></div>
+                        <div><strong>Lerato Ndlovu</strong><br><span>Founder, Fresh Beauty SA</span></div>
+                    </div>
+                </div>
+                <div class="story-panel" data-reveal data-delay="300">
+                    <div class="story-stars">★★★★★</div>
+                    <p class="story-text">"Zero downtime in 8 months. Support responds in <strong>minutes</strong>. It's like having a full-time dev team for a fraction of the cost. Cannot recommend enough."</p>
+                    <div class="story-author">
+                        <div class="author-avatar av-purple"><i class="fas fa-user-astronaut"></i></div>
+                        <div><strong>James van der Merwe</strong><br><span>Director, JV Consulting</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+        <div class="halftone-bg halftone-dark"></div>
+        <div class="burst burst-contact"></div>
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">FINAL CHAPTER</div>
+                <h2 class="section-title">READY FOR <span class="text-yellow">LAUNCH?</span></h2>
+                <p class="section-sub">Drop us a signal. We'll get your website into orbit.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal data-delay="0">
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-phone"></i></div>
+                        <div><strong>Hotline</strong><p>+27 12 345 6789</p></div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                        <div><strong>Signal</strong><p>launch@sattelecoms.co.za</p></div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-location-dot"></i></div>
+                        <div><strong>HQ</strong><p>123 Telecom Tower, Sandton, JHB</p></div>
+                    </div>
+                    <!-- Offer reminder -->
+                    <div class="offer-reminder">
+                        <div class="offer-reminder-burst"></div>
+                        <div class="offer-reminder-inner">
+                            <div class="or-tag">🔥 SPECIAL OFFER</div>
+                            <div class="or-price">R299<span>/mo</span></div>
+                            <div class="or-sub">Website + Hosting + Support + Updates</div>
+                            <a href="#pricing" class="or-link">See All Plans →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-reveal data-delay="200">
+                    <form id="contactForm" class="comic-form">
+                        <div class="form-group">
+                            <label>YOUR NAME</label>
+                            <input type="text" id="name" placeholder="Bruce Wayne" required>
+                        </div>
+                        <div class="form-group">
+                            <label>EMAIL ADDRESS</label>
+                            <input type="email" id="email" placeholder="hero@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>PHONE NUMBER</label>
+                            <input type="tel" id="phone" placeholder="+27 ...">
+                        </div>
+                        <div class="form-group">
+                            <label>YOUR MESSAGE</label>
+                            <textarea id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-comic btn-submit-comic">
+                            <i class="fas fa-rocket"></i>
+                            <span class="btn-text">LAUNCH MY PROJECT!</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="panel-border-top"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="logo-text">SA<span class="logo-accent">TELECOMS</span></span>
+                    </div>
+                    <p>The fastest websites in the universe — built right here in South Africa.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>NAVIGATE</h4>
+                    <a href="#hero">Home</a>
+                    <a href="#powers">Superpowers</a>
+                    <a href="#why">Why Us</a>
+                    <a href="#pricing">Pricing</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4>SUPPORT</h4>
+                    <a href="#stories">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-offer">
+                    <div class="footer-offer-box">
+                        <div class="fob-tag">🔥 BEST OFFER</div>
+                        <div class="fob-price">R299<span>/mo</span></div>
+                        <a href="#pricing" class="btn-comic btn-plan-footer">CLAIM NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SA Telecoms. All rights reserved. Defending the web — one site at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
