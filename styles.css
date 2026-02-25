@@ -339,6 +339,8 @@ body{font-family:var(--font-body);background:var(--panel-bg);color:var(--ink);ov
 .cta-instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
   color:#fff;border-color:rgba(255,255,255,.2);padding:7px 12px}
 .cta-instagram:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(220,39,67,.4)}
+.cta-tiktok{background:#010101;color:#fff;border-color:#333;padding:7px 12px}
+.cta-tiktok:hover{background:#333;transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,255,255,.15)}
 
 /* ROCKET DIVIDERS between sections */
 .rocket-divider{display:flex;align-items:center;gap:1.5rem;padding:16px 24px;
