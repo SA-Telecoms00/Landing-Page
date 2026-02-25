@@ -279,8 +279,52 @@ if (explosionShape) {
   });
 }
 
-/* ===== AGENT CARD RIPPLE ===== */
-document.querySelectorAll('.agent-card, .agent-hero').forEach(card => {
+/* ===== AGENT CARD RIPPLE + 3D TILT ===== */
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = '@keyframes rippleAnim{to{transform:scale(30);opacity:0}}';
+document.head.appendChild(rippleStyle);
+
+document.querySelectorAll('.agent-card').forEach(card => {
+  /* Ripple on click */
+  card.addEventListener('click', function(e) {
+    const ripple = document.createElement('div');
+    const rect = this.getBoundingClientRect();
+    ripple.style.cssText = `
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,0.18);
+      width:10px;height:10px;
+      left:${e.clientX - rect.left - 5}px;
+      top:${e.clientY - rect.top - 5}px;
+      transform:scale(0);
+      animation:rippleAnim 0.55s ease-out forwards;
+      pointer-events:none;z-index:20;
+    `;
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 650);
+  });
+
+  /* 3D tilt on mousemove */
+  card.addEventListener('mousemove', function(e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+    const rotY = ((x - cx) / cx) * 8;
+    const rotX = -((y - cy) / cy) * 6;
+    this.style.transform = `translateY(-12px) scale(1.03) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+    this.style.perspective = '800px';
+  });
+
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = '';
+    this.style.perspective = '';
+  });
+});
+
+/* Hero agent mini-cards ripple */
+document.querySelectorAll('.agent-hero').forEach(card => {
   card.addEventListener('click', function(e) {
     const ripple = document.createElement('div');
     const rect = this.getBoundingClientRect();
@@ -295,15 +339,10 @@ document.querySelectorAll('.agent-card, .agent-hero').forEach(card => {
       animation:rippleAnim 0.5s ease-out forwards;
       pointer-events:none;z-index:10;
     `;
-    this.style.position = 'relative';
     this.appendChild(ripple);
     setTimeout(() => ripple.remove(), 600);
   });
 });
-
-const rippleStyle = document.createElement('style');
-rippleStyle.textContent = '@keyframes rippleAnim{to{transform:scale(30);opacity:0}}';
-document.head.appendChild(rippleStyle);
 
 /* ===== CONTACT FORM ===== */
 const contactForm = document.getElementById('contactForm');
@@ -369,44 +408,52 @@ document.querySelectorAll('.power-panel').forEach(panel => {
   });
 });
 
-/* ===== HERO AGENT LINEUP — SHOW SPEECH BUBBLE ON SCROLL ===== */
+/* ===== HERO AGENT LINEUP — STAGGER IN ON SCROLL ===== */
 const agentLineup = document.querySelector('.hero-agents');
 if (agentLineup) {
   const lineupObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       document.querySelectorAll('.agent-hero').forEach((agent, i) => {
+        agent.style.opacity = '0';
+        agent.style.transform = 'translateY(24px)';
         setTimeout(() => {
-          agent.classList.add('revealed');
+          agent.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          agent.style.opacity = '1';
+          agent.style.transform = 'translateY(0)';
+          /* Flash speech bubble briefly */
           const speech = agent.querySelector('.agent-speech');
           if (speech) {
-            speech.style.opacity = '1';
-            setTimeout(() => { speech.style.opacity = ''; }, 2500);
+            setTimeout(() => {
+              speech.style.opacity = '1';
+              setTimeout(() => { speech.style.opacity = ''; }, 2200);
+            }, 400);
           }
-        }, i * 150);
+        }, i * 160);
       });
       lineupObserver.unobserve(agentLineup);
     }
-  }, { threshold: 0.3 });
+  }, { threshold: 0.25 });
   lineupObserver.observe(agentLineup);
 }
 
-/* ===== TEAM CARD GLOW PULSE ON SCROLL ===== */
+/* ===== TEAM CARD STAGGER IN ON SCROLL ===== */
+const cardPopStyle = document.createElement('style');
+cardPopStyle.textContent = '@keyframes cardPop{0%{opacity:0;transform:translateY(40px) scale(0.93)}60%{transform:translateY(-6px) scale(1.02)}100%{opacity:1;transform:translateY(0) scale(1)}}';
+document.head.appendChild(cardPopStyle);
+
 const teamObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.querySelectorAll('.agent-card').forEach((card, i) => {
+        card.style.opacity = '0';
         setTimeout(() => {
-          card.style.animation = 'cardPop 0.4s ease forwards';
-        }, i * 120);
+          card.style.animation = `cardPop 0.55s ease forwards`;
+        }, i * 140);
       });
       teamObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.2 });
-
-const cardPopStyle = document.createElement('style');
-cardPopStyle.textContent = '@keyframes cardPop{0%{transform:scale(0.92) translateY(16px);opacity:0}60%{transform:scale(1.04) translateY(-4px)}100%{transform:scale(1) translateY(0);opacity:1}}';
-document.head.appendChild(cardPopStyle);
+}, { threshold: 0.15 });
 
 const teamSection = document.querySelector('.team-section');
 if (teamSection) teamObserver.observe(teamSection);
