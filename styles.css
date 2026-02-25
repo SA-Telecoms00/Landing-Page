@@ -71,7 +71,7 @@ body{font-family:var(--font-body);background:var(--panel-bg);color:var(--ink);ov
   border-bottom:4px solid var(--yellow);box-shadow:0 4px 30px rgba(251,191,36,0.2)}
 .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;
   display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
-.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nav-logo-img{height:44px;width:auto;object-fit:contain;display:block;
   filter:drop-shadow(0 0 8px rgba(251,191,36,0.35));transition:filter .2s}
 .nav-logo:hover .nav-logo-img{filter:drop-shadow(0 0 14px rgba(251,191,36,0.65))}
