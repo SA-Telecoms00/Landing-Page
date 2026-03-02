@@ -157,7 +157,7 @@ body{font-family:var(--font-body);background:var(--panel-bg);color:var(--ink);ov
   background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.07));
   backdrop-filter:blur(16px);text-decoration:none;
   border:2px solid rgba(255,255,255,.25);border-radius:16px;
-  padding:12px 22px 12px 14px;
+  padding:10px 20px 10px 10px;
   box-shadow:0 0 25px rgba(66,133,244,.2),0 0 15px rgba(251,191,36,.15),0 10px 40px rgba(0,0,0,.35);
   animation:badgeFloat 3s ease-in-out infinite;transition:all .25s ease;cursor:pointer}
 .hero-google-badge:hover{border-color:rgba(66,133,244,.5);
@@ -165,12 +165,7 @@ body{font-family:var(--font-body);background:var(--panel-bg);color:var(--ink);ov
   transform:translateY(-3px)}
 @keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 .gbadge-left{flex-shrink:0}
-.gbadge-g{width:40px;height:40px;border-radius:10px;
-  background:linear-gradient(135deg,#4285f4,#34a853,#fbbc04,#ea4335);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Inter',sans-serif;font-size:1.5rem;font-weight:900;color:#fff;
-  text-shadow:0 1px 3px rgba(0,0,0,.3);
-  box-shadow:0 0 12px rgba(66,133,244,.4)}
+.gbadge-left img{display:block}
 .gbadge-right{display:flex;flex-direction:column;gap:2px}
 .gbadge-stars{font-size:1.15rem;color:#fbbc04;letter-spacing:2px;line-height:1;
   text-shadow:0 0 10px rgba(251,188,4,.6),0 0 20px rgba(251,188,4,.3)}
@@ -540,7 +535,7 @@ body{font-family:var(--font-body);background:var(--panel-bg);color:var(--ink);ov
   .footer-grid{grid-template-columns:1fr}
   .section-title{font-size:1.9rem}
   .hero-google-badge{padding:10px 16px 10px 10px;gap:10px}
-  .gbadge-g{width:34px;height:34px;font-size:1.2rem}
+  .gbadge-left img{width:28px;height:28px}
   .gbadge-stars{font-size:1rem}
   .gbadge-score{font-size:.95rem}
   .gbadge-label{font-size:.65rem}
