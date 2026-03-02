@@ -351,22 +351,35 @@ if (contactForm) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
     const message = document.getElementById('message').value.trim();
+    if (!name) { showNotification(' Enter your name!', 'error'); return; }
+    if (!email || !email.includes('@')) { showNotification(' Enter a valid email address!', 'error'); return; }
+    if (!message) { showNotification(' Tell us about your project!', 'error'); return; }
 
-    if (!name) { showNotification('⚠️ Please enter your name, hero!', 'error'); return; }
-    if (!email || !email.includes('@')) { showNotification('⚠️ Enter a valid email address!', 'error'); return; }
-    if (!message) { showNotification('⚠️ Tell us about your project!', 'error'); return; }
+    // Construct mailto link with pre-filled message
+    const subject = encodeURIComponent('New Website Inquiry from ' + name);
+    const body = encodeURIComponent(
+      'Hello SA Telecoms Team,\n\n' +
+      'I am interested in your web design and hosting services.\n\n' +
+      '--- Contact Details ---\n' +
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + (phone || 'Not provided') + '\n\n' +
+      '--- Project Details ---\n' +
+      message + '\n\n' +
+      'I would like to discuss pricing and get started with my website.\n\n' +
+      'Best regards,\n' +
+      name
+    );
+    const mailtoLink = 'mailto:deiondre@sa-telecoms.co.za?subject=' + subject + '&body=' + body;
 
-    const btn = contactForm.querySelector('.btn-submit-comic');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> LAUNCHING...';
-    btn.disabled = true;
+    // Open email client
+    window.location.href = mailtoLink;
 
-    setTimeout(() => {
-      showNotification('🚀 Mission received! We\'ll contact you within 24 hours.', 'success');
-      contactForm.reset();
-      btn.innerHTML = '<i class="fas fa-rocket"></i> LAUNCH MY PROJECT!';
-      btn.disabled = false;
-    }, 1800);
+    // Show success notification
+    showNotification(' Opening your email client...', 'success');
+    contactForm.reset();
   });
 }
 
