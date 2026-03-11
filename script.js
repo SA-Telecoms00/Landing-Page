@@ -486,3 +486,30 @@ window.addEventListener('scroll', () => {
       : '';
   });
 }, { passive: true });
+
+/* ===== FLOATING CTA BUTTON ===== */
+const floatingCTA = document.getElementById('floatingCTA');
+const closeCTA = document.getElementById('closeCTA');
+
+// Check if user has closed the CTA before
+const ctaClosed = sessionStorage.getItem('ctaClosed');
+if (ctaClosed === 'true') {
+  floatingCTA.classList.add('hidden');
+} else {
+  // Show floating CTA immediately on page load
+  setTimeout(() => {
+    floatingCTA.classList.add('show');
+  }, 1000); // Small delay for smooth entrance
+}
+
+// Close button functionality
+if (closeCTA) {
+  closeCTA.addEventListener('click', (e) => {
+    e.stopPropagation();
+    floatingCTA.classList.remove('show');
+    setTimeout(() => {
+      floatingCTA.classList.add('hidden');
+    }, 400);
+    sessionStorage.setItem('ctaClosed', 'true');
+  });
+}
