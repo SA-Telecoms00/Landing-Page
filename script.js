@@ -513,3 +513,54 @@ if (closeCTA) {
     sessionStorage.setItem('ctaClosed', 'true');
   });
 }
+
+/* ===== FAQ ACCORDION ===== */
+function toggleFAQ(questionElement) {
+  const faqItem = questionElement.parentElement;
+  const wasActive = faqItem.classList.contains('active');
+  
+  // Close all other FAQs
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // Toggle current FAQ
+  if (!wasActive) {
+    faqItem.classList.add('active');
+  }
+}
+
+// Auto-open the highlighted payment FAQ on page load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const highlightedFAQ = document.querySelector('.faq-highlight');
+    if (highlightedFAQ) {
+      highlightedFAQ.classList.add('active');
+    }
+  }, 1500);
+});
+
+/* ===== BUY NOW POPUP ===== */
+const buyNowPopup = document.getElementById('buyNowPopup');
+
+// Check if user has closed the popup before AND if on mobile
+const popupClosed = sessionStorage.getItem('buyNowPopupClosed');
+const isMobile = window.innerWidth <= 768; // Mobile breakpoint
+if (popupClosed !== 'true' && isMobile) {
+  // Show popup immediately on page load for mobile only
+  setTimeout(() => {
+    buyNowPopup.classList.add('show');
+  }, 500); // Small delay for smooth entrance
+}
+
+function closeBuyNowPopup() {
+  buyNowPopup.classList.remove('show');
+  sessionStorage.setItem('buyNowPopupClosed', 'true');
+}
+
+// Close popup when clicking Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && buyNowPopup.classList.contains('show')) {
+    closeBuyNowPopup();
+  }
+});
